@@ -19,15 +19,17 @@ USE TYPEHINTING EVERYWHERE!
 class Beverage
 {
     // The Properties
-    public string $color;
-    public float $price;
-    public string $temperature;
+    private string $color;
+    private float $price;
+    private string $temperature;
 
     /**
      * @param string $color
      * @param float $price
      * @param string $temperature
      */
+
+    
 
     public function __construct(string $color, float $price)
     {
@@ -36,14 +38,14 @@ class Beverage
         $this->temperature = "cold";
     }
 
-    public function getInfo() :string{
+    private function getInfo() :string{
         return "This beverage is $this->temperature temperature and is $this->color";
     }
 }
 
 $beverage1 = new Beverage("black", 2);
 //$beverage1->temperature ="hot"
-aecho $beverage1->getInfo();
+echo $beverage1->getInfo();
 echo "<br>";
 
 /* EXERCISE 2
@@ -61,18 +63,20 @@ Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefi
 USE TYPEHINTING EVERYWHERE!
 */
 
+
 //TODO: Make class beer that extends from Beverage.
 class Beer extends Beverage
 {
     // The Properties
     //TODO: Create the properties name (string) and alcoholPercentage (float).
-    public string $name;
-    public float $alcoholPercentage;
+    private string $name;
+    private float $alcoholPercentage;
 
     /**
      * @param string $name
      * @param float $alcoholPercentage
      */
+
     //TODO: Foresee a construct that's allows us to use all the properties from beverage and that sets the values for name and alcoholpercentage.
     public function __construct(string $color, float $price, string $name, float$alcoholPercentage)
     {
@@ -82,7 +86,7 @@ class Beer extends Beverage
     }
 
 //TODO: Make a getAlcoholPercentage function which returns the alocoholPercentage.
-    public function getAlcoholPercentage(): string
+    private function getAlcoholPercentage(): string
     {
         return " and the alcohol percentage is $this->alcoholPercentage";
     }
@@ -96,3 +100,20 @@ echo "<br>";
 echo $duvel->alcoholPercentage;
 echo "<br>";
 echo $duvel->color;
+
+/* EXERCISE 3
+
+TODO: Copy the code of exercise 2 to here and delete everything related to cola.
+TODO: Make all properties private.
+TODO: Make all the other prints work without error.
+TODO: After fixing the errors. Change the color of Duvel to light instead of blond and also print this new color on the screen after all the other things that were already printed (to be sure that the color has changed).
+TODO: Create a new private method in the Beer class called beerInfo which returns "Hi i'm Duvel and have an alcochol percentage of 8.5 and I have a light color."
+
+Make sure that you use the variables and not just this text line.
+
+TODO: Print this method on the screen on a new line.
+
+USE TYPEHINTING EVERYWHERE!
+*/
+
+
