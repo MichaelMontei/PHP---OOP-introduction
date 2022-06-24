@@ -20,7 +20,7 @@ This approach to programming is well-suited for programs that are large, complex
 
 ### 🌱 Must haves - digging deeper
 - [Exercise 3](Exercise3.php)
-- [Exercise 4](exercise_4_protected.php)
+- [Exercise 4](Exercise4.php)
 - [Exercise 5](exercise_5_public.php)
 
 ### 🌼 Nice to haves

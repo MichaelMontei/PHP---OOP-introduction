@@ -43,7 +43,7 @@ class Beverage
 
 $beverage1 = new Beverage("black", 2);
 //$beverage1->temperature ="hot"
-aecho $beverage1->getInfo();
+echo $beverage1->getInfo();
 echo "<br>";
 
 /* EXERCISE 2
