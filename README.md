@@ -40,6 +40,17 @@ echo $beverage1->getInfo();
 - Create the constructor with the previous properties and add the parent:: __constructor with the new properties.
 - Make a function to check a parameter and print it out on the screen. 
 
+```php
+<?php
+
+	public function __construct(string $color, float $price, string $name, float$alcoholPercentage)
+    	{
+        	parent:: __construct($color, $price);
+        	$this->name = $name;
+       		$this->alcoholPercentage = $alcoholPercentage;
+    	}
+```
+
 ###Exercise 3
 - Learned the difference between a public and a private properties of the class.
 - How can we still print the paramaters with private properties? (added a getter and setter).
