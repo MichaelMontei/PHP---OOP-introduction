@@ -10,6 +10,7 @@
 - Make a public function constructor to actually create the objects with the (new) command. 
 - Make a new object and print it out with the given paramaters. 
 
+```php
 <?php
 
 class Beverage
@@ -18,6 +19,7 @@ class Beverage
     	public float $price;
    	public string $temperature;
 }
+```
 
 ###Exercise 2
 - Make an extend of the previous class from Exercise 1 
