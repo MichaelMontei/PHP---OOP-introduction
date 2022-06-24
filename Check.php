@@ -16,7 +16,7 @@ class Person
     }
     //make the getter
     public function getName($name){
-        return 'Welcome' . $this->name;
+        return 'Welcome ' . $this->name;
     }
 
     //after making the class insert a constructor
@@ -34,3 +34,6 @@ class Person
 }
 
 //lets make a new person here
+$person = new Person ("Jefke", "brown", 35);
+$person->setName("Michael");
+print_r($person->getName("Michael"));

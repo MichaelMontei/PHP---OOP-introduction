@@ -25,7 +25,7 @@ This approach to programming is well-suited for programs that are large, complex
 ### 🌱 Must haves - digging deeper
 - [Exercise 3](Exercise3.php)
 - [Exercise 4](Exercise4.php)
-- [Exercise 5](exercise_5_public.php)
+- [Exercise 5](Exercise5.php)
 
 ### 🌼 Nice to haves
 - [Exercise 6](exercise_6_const.php)
