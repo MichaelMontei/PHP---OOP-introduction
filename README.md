@@ -32,12 +32,6 @@
 - Call the funtions so we can still print the parameters out.
 
 
-
-- Repository: `oop-introduction`
-- Type of Challenge: `Learning`
-- Duration: `1 day`
-- Team challenge : `solo with some team spirit added`
-
 ## The introduction
 
 OOP - `Object Orientated Programming` - focuses on the objects that developers want to manipulate rather than the logic required to manipulate them. 
