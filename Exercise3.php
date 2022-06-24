@@ -2,20 +2,23 @@
 
 declare(strict_types=1);
 
-/* EXERCISE 1
-TODO: Create a class beverage.
-TODO: Create the properties color (string), price (float) and temperature (string) and also foresee a construct.
-TODO: Have a default value "cold" in the construct for temperature.
+/* EXERCISE 3
 
-Remember for now we will use properties and methods that can be accessed from everywhere.
-TODO: Make a getInfo function which returns "This beverage is <temperature> and <color>."
-TODO: Instantiate an object which represents cola. Make sure that the color is set to black, the price equals 2 euro and the temperature to cold automatically
- print the getInfo on the screen.
-TODO: Print the temperature on the screen.
+TODO: Copy the code of exercise 2 to here and delete everything related to cola.
+TODO: Make all properties private.
+TODO: Make all the other prints work without error.
+TODO: After fixing the errors. Change the color of Duvel to light instead of blond and also print this new color on the screen after all the other things that were already printed (to be sure that the color has changed).
+TODO: Create a new private method in the Beer class called beerInfo which returns "Hi i'm Duvel and have an alcochol percentage of 8.5 and I have a light color."
+
+Make sure that you use the variables and not just this text line.
+
+TODO: Print this method on the screen on a new line.
 
 USE TYPEHINTING EVERYWHERE!
 */
 
+// TODO: Copy the code of exercise 2 to here and delete everything related to cola.
+// TODO: Make all properties private.
 class Beverage
 {
     // The Properties
@@ -38,37 +41,26 @@ class Beverage
         $this->temperature = "cold";
     }
 
-    private function getInfo() :string{
+
+    public function getInfo() :string
+    {
         return "This beverage is $this->temperature temperature and is $this->color";
+    }
+    //added a getter
+    public function getColor() :string
+    {
+        return $this->color;
+    }
+    //added a setter
+    public function setColor(string $color)
+    {
+        $this->color =$color;
     }
 }
 
-$beverage1 = new Beverage("black", 2);
-//$beverage1->temperature ="hot"
-echo $beverage1->getInfo();
-echo "<br>";
 
-/* EXERCISE 2
-TODO: Make class beer that extends from Beverage.
-TODO: Create the properties name (string) and alcoholPercentage (float).
-TODO: Foresee a construct that's allows us to use all the properties from beverage and that sets the values for name and alcoholpercentage.
-Remember for now we will use properties and methods that can be accessed from everywhere.
-
-TODO: Make a getAlcoholPercentage function which returns the alocoholPercentage.
-TODO: Instantiate an object which represents Duvel. Make sure that the color is set to blond, the price equals 3.5 euro and the temperature to cold automatically.
-TODO: Also the name equal to Duvel and the alcohol percentage to 8,5%
-TODO: Print the getAlcoholPercentage 2 times on the screen in two different ways, print the color on the screen and the getInfo.
-Make sure that each print is on a different line.
-Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefined method Beverage::getAlcoholPercentage() in /var/www/becode/workshop/exercise2.php on line 64
-USE TYPEHINTING EVERYWHERE!
-*/
-
-
-//TODO: Make class beer that extends from Beverage.
 class Beer extends Beverage
 {
-    // The Properties
-    //TODO: Create the properties name (string) and alcoholPercentage (float).
     private string $name;
     private float $alcoholPercentage;
 
@@ -77,43 +69,60 @@ class Beer extends Beverage
      * @param float $alcoholPercentage
      */
 
-    //TODO: Foresee a construct that's allows us to use all the properties from beverage and that sets the values for name and alcoholpercentage.
-    public function __construct(string $color, float $price, string $name, float$alcoholPercentage)
+
+    public function __construct(string $color, float $price, string $name, float $alcoholPercentage)
     {
         parent:: __construct($color, $price);
         $this->name = $name;
         $this->alcoholPercentage = $alcoholPercentage;
     }
 
-//TODO: Make a getAlcoholPercentage function which returns the alocoholPercentage.
-    private function getAlcoholPercentage(): string
+    public function getAlcoholPercentage(): float
     {
-        return " and the alcohol percentage is $this->alcoholPercentage";
+        return $this->alcoholPercentage;
+    }
+
+    public function setAlcoholPercentage(float $alcoholPercentage): void
+    {
+        $this->alcoholPercentage = $alcoholPercentage;
+    }
+
+
+    private function beerInfo(): string
+    {
+        return "Hi I'm " . $this->name . " and have an alcohol percentage of " . $this->getAlcoholPercentage() . " and I have a " . $this->getColor() . " color.";
+    }
+
+    public function printBeerInfo(): string
+    {
+        return $this->beerInfo();
     }
 }
 
-//TODO: Print the getAlcoholPercentage 2 times on the screen in two different ways, print the color on the screen and the getInfo.
+//TODO: Make all the other prints work without error.
 $duvel = new Beer("blond", 3.5, "Duvel", 8.5);
-echo $duvel->getInfo();
+
 echo $duvel->getAlcoholPercentage();
-echo "<br>";
-echo $duvel->alcoholPercentage;
-echo "<br>";
-echo $duvel->color;
+echo "<br/>";
+$duvel->setAlcoholPercentage(8.5);
+echo $duvel->getAlcoholPercentage();
+echo "<br/>";
+echo $duvel->getColor();
+echo "<br/>";
+echo $duvel->getInfo();
+echo "<br/><br/>";
 
-/* EXERCISE 3
+//TODO: After fixing the errors. Change the color of Duvel to light instead of blond and also print this new color on the screen after all the other things that were already printed (to be sure that the color has changed).
+$duvel->setColor('light');
+echo $duvel->getColor();
+echo "<br/>";
+echo $duvel->getInfo();
+echo "<br/><br/>";
 
-TODO: Copy the code of exercise 2 to here and delete everything related to cola.
-TODO: Make all properties private.
-TODO: Make all the other prints work without error.
-TODO: After fixing the errors. Change the color of Duvel to light instead of blond and also print this new color on the screen after all the other things that were already printed (to be sure that the color has changed).
-TODO: Create a new private method in the Beer class called beerInfo which returns "Hi i'm Duvel and have an alcochol percentage of 8.5 and I have a light color."
+// TODO: Print this method on the screen on a new line.
+echo $duvel->printBeerInfo();
 
-Make sure that you use the variables and not just this text line.
 
-TODO: Print this method on the screen on a new line.
 
-USE TYPEHINTING EVERYWHERE!
-*/
 
 
