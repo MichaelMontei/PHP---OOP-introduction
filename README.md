@@ -84,12 +84,42 @@ echo $duvel->getAlcoholPercentage();
 - How can we still print the paramaters with protected properties without changing the main class.
 - Call the funtions so we can still print the parameters out.
 
+```php
+<?php
+
+class Beverage {
+
+    protected string $color;
+    protected float $price;
+    protected string $temperature;
+
+	protected function beerInfo(): string
+    	{
+        	return "Hi I'm " . $this->name . " and have an alcohol percentage of " . $this->alcoholPercentage . " and I have a " . $this->color . " color.";
+    	}
+
+    	public function printBeerInfo(): string
+    	{
+        	return $this->beerInfo();
+    	}
+
+```
+
 ###Exercise 5
 - Changed the main class properties back to private. 
 - How can we still print the paramaters with private properties without using the getter and setter?
 - Make a new function inside the class that can still access the private properties and set that to the new variable. 
 - Call the funtions so we can still print the parameters out.
 
+```php
+<?php
+
+	function printChangedPrice(float $changePrice)
+    	{
+        	$this->price = $changePrice;
+        	return "This $this->temperature beverage with a $this->color color will cost $this->price euro.";
+    	}
+```
 
 ## The introduction
 
