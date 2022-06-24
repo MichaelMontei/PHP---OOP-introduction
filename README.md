@@ -13,12 +13,26 @@
 ```php
 <?php
 
-class Beverage
+class Beverage 
 {
 	public string $color;
     	public float $price;
    	public string $temperature;
+
+	public function __construct(string $color, float $price)
+    	{
+        	$this->color = $color;
+        	$this->price = $price;
+        	$this->temperature = "cold";
+    	}
+  	public function getInfo() :string
+	{
+        	return "This beverage is $this->temperature temperature and is $this->color";
+    	}
 }
+
+$beverage1 = new Beverage("black", 2);
+echo $beverage1->getInfo();
 ```
 
 ###Exercise 2
