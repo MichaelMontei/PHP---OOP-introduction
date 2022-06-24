@@ -1,5 +1,9 @@
 # OOP introduction
 
+## A Great Wise Man Once gave me an explanation of OOP!
+![meme](cookieCutterLabelled.png)
+
+
 - Repository: `oop-introduction`
 - Type of Challenge: `Learning`
 - Duration: `1 day`
